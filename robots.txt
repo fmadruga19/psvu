@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://psicologo-villaurquiza.com.ar/sitemap.xml

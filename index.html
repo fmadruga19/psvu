@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Lic. Fernando Madruga | Psicólogo en Villa Urquiza</title>
+<style>
+
+    :root {
+      --ink: #0f172a;
+      --muted: #334155;
+      --border: #cbd5e1;
+      --radius-lg: 1.2rem;
+      --shadow: 0 10px 20px rgba(2,6,23,.06), 0 2px 6px rgba(2,6,23,.04);
+      --teal-700: rgba(6,95,70,.96);
+      --teal-800: rgba(4,78,61,.96);
+      --header-overlay: url('fondoW.jpg');
+      --btn-grad: linear-gradient(90deg, var(--teal-700), var(--teal-800));
+    }
+    *{box-sizing:border-box}
+    html,body{
+      margin:0; padding:0; color:var(--ink);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial;
+      font-size:18px;
+      background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.80)), url('fondoW.jpg');
+      background-size: cover; background-attachment: fixed; background-position: center;
+    }
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%; display:block}
+
+    .container{width:min(1100px,100%); margin-inline:auto; padding-inline:16px}
+    section{padding:64px 0}
+
+    .site-header{position:sticky; top:12px; z-index:60; padding:6px 0; background:transparent}
+    .nav-shell{
+      display:flex; align-items:center; justify-content:space-between; gap:1rem;
+      border-radius:22px; padding:8px 12px;
+      background:
+        linear-gradient(180deg, rgba(6,95,70,.92), rgba(4,78,61,.92)),
+        var(--header-overlay);
+      background-size:cover; background-position:center;
+      border:1.5px solid rgba(255,255,255,.25);
+      box-shadow:0 12px 30px rgba(2,6,23,.22);
+      color:#fff; backdrop-}
+    .brand{display:flex; align-items:center; gap:10px; min-width:300px}
+    .logo{height:30px; width:auto}
+    .brand-stack{display:flex; flex-direction:column; line-height:1.02}
+    .brand-name{font-size:1.2rem; font-weight:800; letter-spacing:.1px}
+    .brand-sub{font-size:.82rem; opacity:.98}
+    nav ul{list-style:none; display:flex; gap:.8rem; margin:0; padding:0}
+    nav a{font-size:.9rem; font-weight:650; color:rgba(255,255,255,.96)}
+    .nav-actions{display:flex; align-items:center; gap:.4rem}
+    .nav-iconbtn{ width:40px; height:40px; display:grid; place-items:center;
+      border-radius:999px; background: var(--btn-grad); color:#fff; box-shadow:var(--shadow);
+      border:1px solid rgba(255,255,255,.2) }
+    .nav-iconbtn svg{width:20px; height:20px; display:block}
+
+    .btn{display:inline-flex; align-items:center; gap:.5rem; border:1px solid transparent;
+      background: var(--btn-grad); color:#fff; padding:.85rem 1.15rem;
+      border-radius:999px; font-weight:750; box-shadow:var(--shadow)}
+    .btn:hover{color:var(--ink); border-color:var(--border); box-shadow:none}
+    .btn.outline:hover{background:rgba(255,255,255,.7)}
+
+    .btn.outline{
+      background: rgba(255,255,255,.78);
+      color: var(--ink);
+      border-color: var(--border);
+      box-shadow: none;
+    }
+    .btn.outline:hover{
+      background: #fff;
+      color: var(--ink);
+      border-color: var(--border);
+      box-shadow: none;
+    }
+
+
+
+    .grid{display:grid; gap:2rem}
+    @media (min-width:880px){ .grid-2{grid-template-columns:1.1fr .9fr; align-items:start} }
+    .media-card{ align-self:start }
+
+    .hero{padding-top:32px}
+    .pill{display:inline-flex; align-items:center; gap:.4rem; border:2px solid var(--border);
+      padding:.5rem .9rem; border-radius:999px; color:#334155; background:rgba(255,255,255,.68); font-size:.95rem}
+    h1{font-size:clamp(1.9rem,1.4rem + 2vw,2.6rem); line-height:1.15; font-weight:700; margin:.35rem 0 .7rem 0}
+    .sublead{color:#0f766e; font-weight:750; margin:.2rem 0 .8rem}
+    p.lead{color:#334155; font-size:1.12rem; line-height:1.74}
+
+    .media-card{border-radius: var(--radius-lg); border:2px solid rgba(15,118,110,.28); overflow:hidden; background:rgba(255,255,255,.50)}
+    .media-wrap{position:relative; width:100%}
+    @supports (aspect-ratio: 3 / 4) { .media-wrap { aspect-ratio: 3 / 4; } }
+    @supports not (aspect-ratio: 4 / 3) { .media-wrap::before{content:""; display:block; padding-top:133%} }
+    .media{position:absolute; inset:0; width:100%; height:100%; object-fit:contain; object-position:center; display:block}
+
+    .card{background:transparent; border:2px solid rgba(15,118,110,.30); border-radius:var(--radius-lg)}
+    .card.soft{
+      border:2px solid transparent;
+      background:
+        linear-gradient(rgba(255,255,255,.36), rgba(255,255,255,.36)) padding-box,
+        linear-gradient(135deg, rgba(16,185,129,.45), rgba(5,150,105,.35)) border-box;
+      box-shadow:var(--shadow)
+    }
+    .content{padding:20px}
+    h2{font-size:clamp(1.6rem,1.15rem + 1.15vw,2.2rem); font-weight:750; margin:0 0 .6rem 0}
+    .muted{color:#334155}
+
+    .services{display:grid; gap:1rem}
+    @media (min-width:760px){ .services{grid-template-columns:repeat(3,1fr)} }
+    .service{padding:20px}
+    .svc-header{display:flex; align-items:center; gap:.6rem; margin-bottom:.3rem}
+    .svc-icon{width:24px; height:24px; color:#0f766e; stroke-width:1.8}
+
+    .facts{display:grid; grid-template-columns:repeat(2,1fr); gap:.8rem}
+    .fact{border:2px solid var(--border); border-radius:16px; padding:14px; background:rgba(255,255,255,.38)}
+
+    details{border:2px solid #e2e8f0;border-radius:14px;padding:12px 16px;background:rgba(255,255,255,.42)}
+    details + details{margin-top:.8rem}
+    summary{cursor:pointer;font-weight:600;list-style:none}
+    summary::-webkit-details-marker{display:none}
+    details[open]{background:rgba(255,255,255,.48)}
+
+    .contact-grid{display:grid; gap:1.4rem}
+    @media (min-width:980px){ .contact-grid{grid-template-columns:1fr 1.2fr} }
+    .contact-links a{color:#0f766e; font-weight:600}
+
+    .wsp-float{
+      position:fixed; right:16px; bottom:18px; width:56px; height:56px;
+      display:grid; place-items:center; border-radius:999px;
+      background:#10b981; color:#fff; box-shadow:0 12px 24px rgba(16,185,129,.35); z-index:60
+    }
+    .wsp-float svg{width:26px; height:26px; display:block}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+    .site-footer{background:transparent; padding:24px 0 32px}
+    .footer-shell{
+      border-radius:22px; padding:20px;
+      background:
+        linear-gradient(180deg, rgba(6,95,70,.92), rgba(4,78,61,.92)),
+        var(--header-overlay);
+      background-size:cover; background-position:center;
+      border:1.5px solid rgba(255,255,255,.25);
+      box-shadow:0 10px 26px rgba(2,6,23,.2);
+      color:#fff;
+    }
+    .foot{display:flex; flex-direction:column; gap:1rem}
+    @media (min-width:760px){ .foot{flex-direction:row; justify-content:space-between; align-items:center} }
+    .footer-shell a{color:rgba(255,255,255,.95)} .footer-shell a:hover{text-decoration:underline}
+  
+.grid-3{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:1rem}
+@media (max-width:900px){.grid-3{grid-template-columns:1fr}}
+
+    /* Ajustes solicitados: imagen sin marco y sin recorte */
+    .media-card{border:none !important; background:transparent !important; box-shadow:none !important}
+
+    /* Ajuste de espaciado: menos blanco entre Hero y secciones */
+    #inicio{padding-bottom:2.2rem !important}
+    #servicios{padding-top:2.2rem !important}
+
+.about-img{max-width:290px !important}
+
+    /* Sobre mí: proporción 1/3 imagen - 2/3 texto */
+    .about-grid{gap:1.25rem}
+    @media (min-width:901px){
+      .about-grid{grid-template-columns:1fr 2fr}
+      .about-media{justify-content:flex-start}
+    }
+
+    /* Ajuste de espaciado: menos blanco entre Hero y Sobre mí */
+    #inicio{padding-bottom:1.4rem !important}
+    #sobre-mi{padding-top:1.4rem !important}
+
+    /* --- Mobile fixes (Feb 2026) --- */
+    *, *::before, *::after{ box-sizing:border-box; }
+    html, body{ overflow-x:hidden; }
+
+    /* Prevent 2-column grids on small screens */
+    @media (max-width:879px){
+      .grid-2{ grid-template-columns:1fr; }
+    }
+
+    /* Header: avoid overlap and allow wrapping on mobile */
+    @media (max-width:720px){
+      .nav-shell{ flex-wrap:wrap; justify-content:center; gap:.6rem; }
+      .brand{ min-width:0; width:100%; justify-content:center; }
+      .brand-stack{ align-items:center; text-align:center; }
+      .brand-name{ font-size:1.05rem; }
+      .brand-sub{ font-size:.78rem; }
+
+      nav{ width:100%; }
+      nav ul{ flex-wrap:wrap; justify-content:center; gap:.55rem; }
+      nav a{ font-size:.88rem; }
+
+      .nav-actions{ width:100%; justify-content:center; }
+    }
+
+    /* Slightly reduce section padding on small screens */
+    @media (max-width:520px){
+      section{ padding:44px 0; }
+      .hero{ padding-top:18px; }
+    }
+
+
+    @media (max-width:420px){ .about-img{max-width:260px !important} }
+    
+
+
+    
+    
+    
+    /* Spacing tune v14 (Feb 2026) */
+    .hero{ padding-top:124px !important; }
+    #inicio{ padding-bottom:8px !important; }
+    #servicios{ margin-top:-12px !important; padding-top:0px !important; padding-bottom:52px !important; }
+    #sobre-mi{ padding-top:76px !important; padding-bottom:20px !important; }
+    #como-trabajo{ margin-top:-28px !important; padding-top:0px !important; } /* closer */
+
+    @media (max-width:520px){
+      .hero{ padding-top:64px !important; }
+      #inicio{ padding-bottom:6px !important; }
+      #servicios{ margin-top:-10px !important; padding-bottom:44px !important; }
+      #sobre-mi{ padding-top:66px !important; padding-bottom:18px !important; }
+      #como-trabajo{ margin-top:-14px !important; padding-top:0px !important; }
+    }
+
+
+    
+    @media (max-width:520px){ }
+    
+
+          /* Hero title slightly smaller so it fits in one line */
+      .hero h1{ font-size:1.9rem !important; letter-spacing:-0.01em; }
+
+      /* Separate Sobre mi and Como trabajo */
+      #como-trabajo{ margin-top:12px !important; padding-top:18px !important; }
+    }
+
+
+
+    /* Hero title smaller so it fits in one line */
+      .hero h1{ font-size:1.78rem !important; letter-spacing:-0.015em; }
+
+      /* Bring Sobre mi image closer to Cuando consultar and to its title/text */
+      #sobre-mi{ padding-top:54px !important; }
+      #sobre-mi .grid-2{ row-gap:10px !important; }
+      .about-img{ margin-top:0px !important; margin-bottom:0px !important; }
+      #sobre-mi h2{ margin-top:0px !important; margin-bottom:8px !important; }
+
+      /* Separate Sobre mi and Como trabajo (push Como trabajo down) */
+      #como-trabajo{ margin-top:26px !important; padding-top:26px !important; }
+    }
+
+
+
+    /* Hero title smaller so it fits in one line */
+      .hero h1{ font-size:1.72rem !important; letter-spacing:-0.02em; }
+
+      /* Bring Sobre mi much closer to Cuando consultar and reduce space around books image */
+      #sobre-mi{ padding-top:34px !important; padding-bottom:10px !important; }
+      #sobre-mi .grid-2{ row-gap:2px !important; }
+      .about-img{ margin-top:-10px !important; margin-bottom:-12px !important; }
+      #sobre-mi h2{ margin-top:0px !important; margin-bottom:6px !important; }
+      #sobre-mi p{ margin-top:0px !important; }
+
+      /* Separate Sobre mi and Como trabajo (push Como trabajo down) */
+      #como-trabajo{ margin-top:30px !important; padding-top:28px !important; }
+    }
+
+
+
+    /* Hero title smaller so it fits in one line */
+      .hero h1{ font-size:1.68rem !important; letter-spacing:-0.02em; }
+
+      /* Bring Sobre mi much closer to Cuando consultar and reduce space around books image (tighter) */
+      #sobre-mi{ padding-top:22px !important; padding-bottom:6px !important; }
+      #sobre-mi .grid-2{ row-gap:0px !important; }
+      .about-img{ margin-top:-18px !important; margin-bottom:-18px !important; max-width:340px; }
+      #sobre-mi h2{ margin-top:0px !important; margin-bottom:4px !important; }
+      #sobre-mi p{ margin-top:0px !important; }
+
+      /* Separate Sobre mi and Como trabajo (push Como trabajo down) */
+      #como-trabajo{ margin-top:34px !important; padding-top:30px !important; }
+
+      /* Fix background flicker/jitter on mobile (disable fixed/parallax behaviors) */
+      body{  background-position:center top !important; background-size:cover !important; }
+      .bg-wave, .bg, .background, .bg-wrap{  }
+    }
+
+
+    }
+
+
+    /* Mobile tweaks (Feb 2026) */
+    @media (max-width:520px){
+      /* Hero a bit higher (less top padding) */
+      .hero{ padding-top:34px !important; }
+
+      /* Hero title smaller so it fits in one line */
+      .hero h1{ font-size:1.62rem !important; letter-spacing:-0.022em; }
+
+      /* Bring Sobre mi much closer to Cuando consultar and reduce space around books image (tighter+) */
+      #sobre-mi{ padding-top:14px !important; padding-bottom:4px !important; }
+      #sobre-mi .grid-2{ row-gap:0px !important; }
+      .about-img{ margin-top:-26px !important; margin-bottom:-26px !important; max-width:320px; }
+      #sobre-mi h2{ margin-top:0px !important; margin-bottom:4px !important; }
+      #sobre-mi p{ margin-top:0px !important; }
+
+      /* Separate Sobre mi and Como trabajo (push Como trabajo down) */
+      #como-trabajo{ margin-top:34px !important; padding-top:30px !important; }
+
+      /* Fix background flicker/jitter on mobile */
+      body{  background-position:center top !important; background-size:cover !important; }
+      .bg-wave, .bg, .background, .bg-wrap{  }
+    }
+
+
+
+    /* PC restore (Feb 2026) */
+    @media (min-width:521px){
+      .hero h1{ font-size:2.6rem !important; }
+    }
+
+
+
+    /* PC spacing override (Feb 2026) */
+    @media (min-width:521px){
+      #como-trabajo{ margin-top:-34px !important; padding-top:0px !important; }
+    }
+
+
+
+/* ===== Background behavior + PC spacing (Feb 2026) ===== */
+@media (min-width: 521px){
+  body{
+    background-attachment: fixed !important;
+    background-position: center top !important;
+    background-size: cover !important;
+  }
+  #sobre-mi{ padding-top: 92px !important; }
+  #como-trabajo{ margin-top: -34px !important; padding-top: 0px !important; }
+}
+
+
+
+/* Mobile background fix: keep wave visible without scroll-jitter */
+@media (max-width: 520px){
+  html, body{ height: 100%; }
+  body{
+    background: none !important; /* background is handled by ::before */
+  }
+  }
+
+
+
+/* ===== Background final v10 (restore PC) ===== */
+@media (min-width: 521px){
+  body{
+    background-attachment: fixed !important;
+    background-position: center top !important;
+    background-size: cover !important;
+  }
+}
+
+
+
+/* ===== Mobile background v10 (light + no-jitter) ===== */
+@media (max-width: 520px){
+  body{
+    background-color: #ECFDF5 !important;
+    background-image:
+      linear-gradient(rgba(236,253,245,0.88), rgba(236,253,245,0.88)),
+      url('fondoW.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-position: center top !important;
+    background-size: cover !important;
+    background-attachment: scroll !important;
+  }
+}
+
+
+
+@media (max-width: 520px){
+  html, body{ overflow-x: hidden !important; }
+}
+
+
+
+/* ===== Mobile header + background stability (v11) ===== */
+@media (max-width: 520px){
+  /* Make header truly fixed (sticky can drift with mobile browser UI) */
+  .site-header{
+    position: fixed !important;
+    top: 10px !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 999 !important;
+    padding: 6px 12px !important;
+  }
+
+  /* Reserve space so content doesn't slide under the fixed header */
+  body{
+    padding-top: 88px !important;
+  }
+
+  /* Keep hero visually a bit higher (since body now has padding-top) */
+  .hero{
+    padding-top: 0px !important;
+  }
+
+  /* Put the background on html to avoid 'white band' / jump on viewport changes */
+  html{
+    background-color: #ECFDF5 !important;
+    background-image:
+      linear-gradient(rgba(236,253,245,0.88), rgba(236,253,245,0.88)),
+      url('fondoW.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-position: center top !important;
+    background-size: cover !important;
+    background-attachment: scroll !important;
+  }
+  body{
+    background: transparent !important;
+  }
+}
+
+
+
+/* ===== Recovery block v15 (Feb 2026) =====
+   Goal: restore the previous stable layout and ONLY fix the mobile header overlap.
+*/
+@media (max-width: 520px) {
+  /* 1) Header should NOT float over content */
+  header, .site-header, header.site-header {
+    position: static !important;
+    top: auto !important;
+    z-index: auto !important;
+    transform: none !important;
+  }
+
+  /* If any sticky behavior exists on inner nav, neutralize it too */
+  nav, .nav, .navbar {
+    position: static !important;
+    top: auto !important;
+  }
+
+  /* 2) Prevent horizontal side-scroll (common after flex/nav issues) */
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+  .container {
+    max-width: 100% !important;
+  }
+  img, svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 3) If hero image got a border on some rules, remove it on mobile */
+  .hero img, .hero .image, .hero .hero-image, .hero .img, .hero .img-wrap {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* 4) Ensure the header links can wrap instead of pushing layout sideways */
+  header .nav-links, header .links, header ul {
+    flex-wrap: wrap !important;
+    row-gap: 10px !important;
+  }
+}
+
+
+
+/* ===== Mobile logo sizing fix (v16) ===== */
+@media (max-width: 520px){
+  header img, header .logo img, .brand img, .site-logo img{
+    max-height: 34px !important;
+    width: auto !important;
+  }
+  /* if the logo is a standalone image link */
+  header a img{
+    max-height: 34px !important;
+    width: auto !important;
+  }
+}
+
+
+
+/* ===== Mobile spacing: header higher, hero lower (v17) ===== */
+@media (max-width: 520px){
+  /* Reduce any top padding/margin that pushes header down */
+  body{ margin-top: 0 !important; padding-top: 0 !important; }
+  header{ margin-top: 0 !important; padding-top: 10px !important; }
+  header .container{ padding-top: 0 !important; padding-bottom: 6px !important; }
+
+  /* Add breathing room between header and hero */
+  .hero{ margin-top: 14px !important; }
+}
+
+
+
+
+
+/* allow divan to be larger, but not overwhelming */
+  .hero img{ max-height: 460px !important; width: auto !important; }
+  .hero .hero-image, .hero .image, .hero .img-wrap{ max-height: 460px !important; }
+
+  /* tighten spacing between Hero and "Cuando consultar" */
+  #cuando-consultar{ padding-top: 26px !important; }
+}
+
+/* push Como trabajo down clearly */
+  #como-trabajo{ margin-top: 42px !important; padding-top: 28px !important; }
+  #como-trabajo, #como-trabajo .container{ clear: both !important; }
+
+  /* keep divan reasonably sized */
+  .hero img{ max-height: 520px !important; width: auto !important; }
+
+  /* reduce books image whitespace a lot */
+  #sobre-mi{ padding-top: 38px !important; }
+  .about-img{ margin-top: -22px !important; margin-bottom: -20px !important; max-width: 320px !important; }
+}
+
+
+
+/* ===== Orientation-specific fixes (v20) ===== */
+/* Reduce the gap between hero and next section */
+  #inicio{ padding-bottom: 1.0rem !important; }
+  #servicios{ padding-top: 1.1rem !important; }
+
+  /* Slightly tighter hero top spacing in this orientation */
+  .hero{ padding-top: 26px !important; }
+
+  /* Books image whitespace (if user scrolls down in landscape) */
+  #sobre-mi{ padding-top: 16px !important; padding-bottom: 10px !important; }
+  .about-img{ margin-top: -22px !important; margin-bottom: -22px !important; max-width: 320px !important; }
+}
+
+/* Tablet portrait: prevent overlap between "Sobre mi" pills and "Como trabajo" */
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait){
+  /* Give Sobre mi more room below, so the next section cannot overlap */
+  #sobre-mi{ padding-bottom: 110px !important; padding-top: 34px !important; }
+
+  /* Override any negative desktop margin that may be applied */
+  #como-trabajo{
+    margin-top: 52px !important;
+    padding-top: 26px !important;
+    clear: both !important;
+  }
+
+  /* Books image whitespace in this orientation */
+  .about-img{ margin-top: -18px !important; margin-bottom: -16px !important; max-width: 340px !important; }
+
+  /* Divan image slightly smaller to fit portrait height */
+  #inicio .media-card .media{ max-height: 560px !important; width: auto !important; }
+
+  /* Also reduce hero->servicios gap slightly in this orientation */
+  #inicio{ padding-bottom: 1.6rem !important; }
+  #servicios{ padding-top: 1.6rem !important; }
+}
+
+
+
+/* Phone landscape on large phones: match by HEIGHT (landscape often >820px wide) */
+@media (max-height: 520px) and (orientation: landscape){
+  /* tighten hero -> servicios gap */
+  #inicio.hero{ padding-bottom: 0.9rem !important; }
+  #servicios{ padding-top: 0.9rem !important; }
+
+  /* divan image size */
+  #inicio .media-card .media{ max-height: 520px !important; width: auto !important; }
+
+  /* reduce books whitespace */
+  #sobre-mi{ padding-top: 12px !important; padding-bottom: 10px !important; }
+  .about-img{ margin-top: -26px !important; margin-bottom: -26px !important; max-width: 320px !important; }
+}
+
+/* Tablet portrait: broaden match; prevent overlap from negative margins */
+@media (orientation: portrait) and (min-width: 600px) and (max-width: 1200px){
+  #sobre-mi{ padding-bottom: 140px !important; }
+
+  /* neutralize negative margin that causes overlap */
+  #como-trabajo{ margin-top: 36px !important; padding-top: 22px !important; clear: both !important; }
+  #como-trabajo .container{ clear: both !important; }
+
+  /* books whitespace */
+  .about-img{ margin-top: -20px !important; margin-bottom: -18px !important; max-width: 340px !important; }
+}
+
+
+
+/* ===== Orientation overrides (v22 - corrected thresholds) ===== */
+/* Phone landscape: target by HEIGHT so it applies on real phones, not tablets */
+@media (orientation: landscape) and (max-height: 650px){
+  /* Huge gap Hero -> Cuando consultar */
+  #inicio{ padding-bottom: 14px !important; }
+  #servicios{ padding-top: 14px !important; }
+
+  /* Keep divan reasonably sized */
+  #inicio .media-card .media{ max-height: 520px !important; width: auto !important; }
+
+  /* Books whitespace (when scrolling in landscape) */
+  #sobre-mi{ padding-top: 10px !important; padding-bottom: 8px !important; }
+  .about-img{ margin-top: -30px !important; margin-bottom: -30px !important; max-width: 320px !important; }
+}
+
+/* Tablet portrait: prevent overlap from any negative margins and ensure separation */
+@media (orientation: portrait) and (min-width: 600px) and (max-width: 1024px){
+  #sobre-mi{ padding-bottom: 150px !important; }
+
+  #como-trabajo{
+    margin-top: 70px !important;
+    padding-top: 26px !important;
+    clear: both !important;
+    position: relative !important;
+    z-index: 0 !important;
+  }
+
+  /* reduce books whitespace */
+  .about-img{ margin-top: -22px !important; margin-bottom: -20px !important; max-width: 340px !important; }
+}
+
+
+
+/* Phone landscape: target by HEIGHT (reliable on phones rotated) */
+@media (max-height: 520px) and (orientation: landscape) and (hover: none){
+  /* Sections have large vertical padding; reduce it in this mode */
+  section{ padding-top: 22px !important; padding-bottom: 22px !important; }
+
+  /* Tighten Hero -> Servicios gap */
+  #inicio{ padding-bottom: 14px !important; }
+  #servicios{ padding-top: 18px !important; }
+
+  /* Divan: not tiny */
+  #inicio .media{ max-height: 520px !important; width: auto !important; }
+
+  /* Books image whitespace (Sobre mí) */
+  #sobre-mi{ padding-top: 18px !important; padding-bottom: 18px !important; }
+  .about-img{ margin-top: -28px !important; margin-bottom: -28px !important; max-width: 340px !important; }
+}
+
+/* Tablet portrait: remove overlap but keep Como trabajo close (not too low) */
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait){
+  /* Ensure enough space under Sobre mí chips */
+  #sobre-mi{ padding-bottom: 78px !important; }
+
+  /* Override desktop negative margin that causes overlap */
+  #como-trabajo{
+    margin-top: 22px !important;
+    padding-top: 18px !important;
+    clear: both !important;
+  }
+
+  /* Reduce whitespace around books image */
+  .about-img{ margin-top: -18px !important; margin-bottom: -18px !important; max-width: 360px !important; }
+}
+
+
+
+/* PHONE landscape: apply targeted spacing fixes WITHOUT affecting desktop.
+   We restrict to touch devices and narrow widths so PC never matches. */
+@media (max-width: 900px) and (orientation: landscape) and (pointer: coarse){
+  /* Tighten Hero -> Servicios gap */
+  #inicio{ padding-bottom: 14px !important; }
+  #servicios{ padding-top: 18px !important; }
+
+  /* Divan: keep readable but not gigantic */
+  #inicio .media{ max-height: 520px !important; width: auto !important; }
+
+  /* Reduce whitespace around books image */
+  #sobre-mi{ padding-top: 18px !important; padding-bottom: 18px !important; }
+  .about-img{ margin-top: -26px !important; margin-bottom: -26px !important; max-width: 340px !important; }
+}
+
+/* TABLET portrait: prevent overlap but keep Como trabajo close */
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait){
+  #sobre-mi{ padding-bottom: 78px !important; }
+  #como-trabajo{
+    margin-top: 22px !important;
+    padding-top: 18px !important;
+    clear: both !important;
+  }
+  .about-img{ margin-top: -18px !important; margin-bottom: -18px !important; max-width: 360px !important; }
+}
+
+/* DESKTOP safeguard: ensure hero sizing/spacing stays as before (in case of odd viewport heights) */
+@media (min-width: 1025px){
+  #inicio{ padding-bottom: 64px !important; } /* restore default section rhythm */
+  #servicios{ padding-top: 88px !important; }
+  #inicio .media{ max-height: none !important; }
+}
+
+
+
+/* 1) Phone LANDSCAPE: force "desktop/tablet-like" spacing to avoid huge gaps */
+@media (max-width: 960px) and (orientation: landscape) and (pointer: coarse){
+  /* Use a more "tablet/desktop" rhythm */
+  section{ padding-top: 34px !important; padding-bottom: 34px !important; 
+  #inicio .media-card{ margin-bottom: 0 !important; }
+}
+
+
+  /* Specifically reduce the excessive gap between Hero and Servicios */
+  #inicio{ padding-bottom: 40px !important; }
+  #servicios{ padding-top: 48px !important; }
+
+  /* Divan image: allow it to be big (desktop-like) */
+  #inicio .media{ max-height: 640px !important; width: auto !important; }
+
+  /* Books: reduce extra whitespace around the illustration */
+  #sobre-mi{ padding-top: 42px !important; padding-bottom: 42px !important; }
+  .about-img{ margin-top: -18px !important; margin-bottom: -18px !important; max-width: 360px !important; }
+}
+
+/* 2) Tablet PORTRAIT: force "mobile-like" stacking + safe spacing to prevent overlap */
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse){
+  /* Treat as mobile spacing */
+  section{ padding-top: 52px !important; padding-bottom: 52px !important; 
+  #inicio{ padding-bottom: 22px !important; }
+  #servicios{ padding-top: 28px !important; }
+}
+
+
+  /* Ensure Sobre mi has enough room for the pills and image */
+  #sobre-mi{ padding-bottom: 120px !important; }
+
+  /* Make sure Como trabajo starts AFTER Sobre mi (no overlap) */
+  #como-trabajo{
+    margin-top: 36px !important;
+    padding-top: 28px !important;
+    clear: both !important;
+  }
+  #como-trabajo .container{ clear: both !important; }
+
+  /* Tighten books whitespace */
+  .about-img{ margin-top: -24px !important; margin-bottom: -22px !important; max-width: 380px !important; }
+}
+
+
+
+/* ===== Forced-layout fixes (v26) ===== */
+/* Phone LANDSCAPE: tighten Hero->Servicios gap and reduce excess whitespace */
+@media (max-width: 960px) and (orientation: landscape) and (pointer: coarse){
+  /* compact overall rhythm in this mode */
+  section{ padding-top: 34px !important; padding-bottom: 34px !important; }
+
+  /* reduce the excessive gap between Hero and Servicios */
+  #inicio{ padding-bottom: 16px !important; }
+  #inicio .media-card{ margin-bottom: 0 !important; }
+  #servicios{ padding-top: 18px !important; }
+
+  /* divan image: allow it to be big but not absurd */
+  #inicio .media{ max-height: 640px !important; width: auto !important; }
+
+  /* books: reduce whitespace around illustration */
+  #sobre-mi{ padding-top: 28px !important; padding-bottom: 28px !important; }
+  .about-img{ margin-top: -18px !important; margin-bottom: -18px !important; max-width: 360px !important; }
+}
+
+/* Tablet PORTRAIT: avoid overlap and reduce whitespace around books */
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait){
+  /* ensure Sobre mi pills never overlap next section */
+  #sobre-mi{ padding-bottom: 96px !important; }
+
+  /* keep Como trabajo close but always below */
+  #como-trabajo{
+    margin-top: 18px !important;
+    padding-top: 18px !important;
+    clear: both !important;
+  }
+
+  /* tighten books whitespace */
+  #sobre-mi{ padding-top: 36px !important; }
+  .about-img{ margin-top: -18px !important; margin-bottom: -18px !important; max-width: 380px !important; }
+
+  /* reduce Hero -> Servicios gap slightly */
+  #inicio{ padding-bottom: 22px !important; }
+  #servicios{ padding-top: 28px !important; }
+}
+
+
+
+/* ===== Spacing tune (v27) ===== */
+
+/* PC: separate header and hero, bring "Cuando consultar" up, and prevent overlap after books crop */
+@media (min-width: 1025px){
+  /* more breathing room between header and hero */
+  #inicio.hero{ padding-top: 52px !important; }
+  /* bring servicios closer to hero */
+  #inicio{ padding-bottom: 42px !important; }
+  #servicios{ padding-top: 56px !important; }
+
+  /* after cropping books, ensure Como trabajo doesn't overlap and sits a bit lower */
+  #sobre-mi{ padding-bottom: 64px !important; }
+  #como-trabajo{ margin-top: 22px !important; }
+}
+
+/* Phone landscape: reduce huge gap hero -> servicios even more */
+@media (max-width: 960px) and (orientation: landscape) and (pointer: coarse){
+  #inicio{ padding-bottom: 10px !important; }
+  #servicios{ padding-top: 10px !important; }
+}
+
+/* Tablet portrait: reduce gap hero -> servicios; keep como trabajo from overlapping */
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait){
+  #inicio{ padding-bottom: 12px !important; }
+  #servicios{ padding-top: 18px !important; }
+  #sobre-mi{ padding-bottom: 86px !important; }
+  #como-trabajo{ margin-top: 22px !important; padding-top: 18px !important; }
+}
+
+/* Tablet landscape: also reduce gap hero -> servicios (was still large) */
+@media (min-width: 900px) and (max-width: 1366px) and (orientation: landscape) and (pointer: coarse){
+  #inicio{ padding-bottom: 14px !important; }
+  #servicios{ padding-top: 20px !important; }
+  /* ensure books section doesn't create excess whitespace */
+  #sobre-mi{ padding-top: 34px !important; padding-bottom: 34px !important; }
+  .about-img{ margin-top: -14px !important; margin-bottom: -14px !important; }
+}
+
+
+
+/* ===== Final spacing tweaks (v29) ===== */
+
+/* PC + Tablet landscape: bring "Cuando consultar" closer to Hero */
+@media (min-width: 1025px){
+  #inicio{ padding-bottom: 34px !important; }
+  #servicios{ padding-top: 44px !important; }
+}
+@media (min-width: 900px) and (max-width: 1366px) and (orientation: landscape) and (pointer: coarse){
+  #inicio{ padding-bottom: 10px !important; }
+  #servicios{ padding-top: 16px !important; }
+}
+
+/* Phone landscape: slightly larger divan and tighter spacing around it */
+@media (max-width: 960px) and (orientation: landscape) and (pointer: coarse){
+  /* reduce empty space above/below hero media */
+  #inicio{ padding-top: 18px !important; padding-bottom: 10px !important; }
+  #servicios{ padding-top: 14px !important; }
+
+  /* make divan a bit larger */
+  #inicio .media{ max-height: 700px !important; }
+
+  /* Sobre mi + Como trabajo: lower sections a bit to avoid looking cramped */
+  #sobre-mi{ margin-top: 18px !important; }
+  #como-trabajo{ margin-top: 18px !important; }
+
+  /* books image: move slightly up within its block */
+  #sobre-mi{ padding-top: 26px !important; padding-bottom: 26px !important; }
+  .about-img{ margin-top: -26px !important; margin-bottom: -14px !important; }
+}
+
+
+
+/* ===== Tweaks requested (v30) ===== */
+
+/* PC: lower Hero (more space under header) and bring "Cuando consultar" closer */
+@media (min-width: 1025px){
+  #inicio.hero{ padding-top: 64px !important; }   /* lower hero */
+  #inicio{ padding-bottom: 26px !important; }     /* less gap to next section */
+  #servicios{ padding-top: 34px !important; }     /* bring Cuando consultar up more */
+}
+
+/* Phone portrait: lower "Sobre mi" a bit (more air above it) */
+@media (max-width: 520px){
+  #sobre-mi{ margin-top: 14px !important; }
+}
+
+/* Phone landscape: reduce divan size to avoid big empty gap + raise books image a bit */
+@media (max-width: 960px) and (orientation: landscape) and (pointer: coarse){
+  /* slightly smaller divan to prevent large empty gap */
+  #inicio .media{ max-height: 600px !important; }
+
+  /* keep hero -> servicios tight */
+  #inicio{ padding-bottom: 10px !important; }
+  #servicios{ padding-top: 12px !important; }
+
+  /* raise books image */
+  .about-img{ margin-top: -34px !important; margin-bottom: -14px !important; }
+}
+
+
+
+/* ===== Mobile fixes (v31) ===== */
+
+/* Mobile (portrait + landscape): stop books image overlapping the "Sobre mi" title/text */
+@media (max-width: 520px){
+  /* add space after the illustration */
+  .about-img{ margin-bottom: 8px !important; }
+  /* ensure the text column starts below if needed */
+  #sobre-mi .about-content, #sobre-mi .text, #sobre-mi .copy{ margin-top: 14px !important; }
+}
+@media (max-width: 960px) and (orientation: landscape) and (pointer: coarse){
+  /* add more space so the illustration never covers the title */
+  .about-img{ margin-top: -24px !important; margin-bottom: 18px !important; }
+}
+
+/* Phone landscape: reduce the empty gap under the divan by limiting the media card height
+   and tightening hero paddings. */
+@media (max-width: 960px) and (orientation: landscape) and (pointer: coarse){
+  #inicio .media{ max-height: 520px !important; }
+  #inicio{ padding-bottom: 6px !important; }
+  #servicios{ padding-top: 8px !important; }
+  /* if the media card itself creates the gap, cap it */
+  #inicio .media-card{ max-height: 560px !important; }
+}
+
+
+
+/* ===== Tablet spacing fixes (v32) ===== */
+
+/* Tablet portrait: reduce huge gap Hero -> Servicios */
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait){
+  #inicio{ padding-bottom: 18px !important; }
+  #inicio .media-card{ margin-bottom: 0 !important; }
+  #servicios{ padding-top: 22px !important; }
+}
+
+/* Tablet landscape: also reduce gap Hero -> Servicios */
+@media (min-width: 900px) and (max-width: 1366px) and (orientation: landscape) and (pointer: coarse){
+  #inicio{ padding-bottom: 18px !important; }
+  #inicio .media-card{ margin-bottom: 0 !important; }
+  #servicios{ padding-top: 22px !important; }
+}
+
+/* Tablet portrait + Mobile portrait: separate books image from "Sobre mi" title/text */
+@media (max-width: 520px), (min-width: 600px) and (max-width: 1024px) and (orientation: portrait){
+  .about-img{ margin-bottom: 22px !important; }
+  /* add breathing room before heading/text */
+  #sobre-mi h2, #sobre-mi .section-title{ margin-top: 10px !important; }
+}
+
+
+
+/* ===== Tablet portrait hero gap FIX (v35) ===== */
+/* Root cause: hero image container uses .media-wrap aspect-ratio (3/4) or ::before padding-top:133%,
+   which reserves a tall block and creates the big empty space. We neutralize that ONLY on tablet portrait. */
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait){
+  /* tighten hero -> servicios */
+  #inicio{ padding-bottom: 10px !important; }
+  #servicios{ padding-top: 18px !important; }
+
+  /* neutralize aspect ratio spacer */
+  #inicio .media-wrap{
+    aspect-ratio: auto !important;
+    height: auto !important;
+  }
+  #inicio .media-wrap::before{
+    content: none !important;
+    display: none !important;
+    padding-top: 0 !important;
+  }
+
+  /* let the image define its own height */
+  #inicio .media{
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 560px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+}
+
+</style>
+<link href="https://psicologo-villaurquiza.com.ar/" rel="canonical"/><meta content="Lic. Fernando Madruga - Psicólogo" property="og:title"/><meta content="Psicólogo en Villa Urquiza. Un espacio de trabajo reflexivo para pensar lo que te está pasando, poner en palabras lo que se vuelve difícil." property="og:description"/><meta content="website" property="og:type"/><meta content="https://psicologo-villaurquiza.com.ar/" property="og:url"/><meta content="https://psicologo-villaurquiza.com.ar/og-divan-a.png" property="og:image"/><meta content="Psicólogo Villa Urquiza" property="og:site_name"/><meta content="es_AR" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><meta content="Lic. Fernando Madruga - Psicólogo" name="twitter:title"/><meta content="Psicólogo en Villa Urquiza. Un espacio de trabajo reflexivo para pensar lo que te está pasando, poner en palabras lo que se vuelve difícil." name="twitter:description"/><meta content="https://psicologo-villaurquiza.com.ar/og-divan-a.png" name="twitter:image"/><link href="favicon.ico" rel="icon"/><link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/><link href="favicon-16.png" rel="icon" sizes="16x16" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><meta content="Psicólogo en Villa Urquiza. Un espacio de trabajo reflexivo para pensar lo que te está pasando, poner en palabras lo que se vuelve difícil." name="description"/></head>
+<body>
+<header class="site-header">
+<div class="container">
+<div class="nav-shell">
+<div class="brand">
+<img alt="Logo Fernando Madruga" class="logo" src="logopsico.png"/>
+<div class="brand-stack">
+<span class="brand-name">Lic. Fernando Madruga</span>
+<span class="brand-sub">Psicólogo UBA - MN72094</span>
+</div>
+</div>
+<nav aria-label="Principal">
+<ul>
+<li><a href="#sobre-mi">Sobre mí</a></li>
+<li><a href="#faq">Preguntas</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+</nav>
+<div class="nav-actions">
+<a aria-label="Contactar por WhatsApp" class="nav-iconbtn" href="https://wa.me/541157502776" rel="noreferrer" target="_blank">
+<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24">
+<path d="M20.52 3.48A11.9 11.9 0 0 0 12.06 0C5.46 0 .12 5.34.12 11.94c0 2.1.54 4.14 1.56 5.94L0 24l6.24-1.62A11.8 11.8 0 0 0 12.06 24c6.6 0 11.94-5.34 11.94-11.94 0-3.18-1.26-6.18-3.48-8.58zM12.06 21.6c-1.86 0-3.6-.48-5.16-1.44l-.36-.24-3.72.96.96-3.6-.24-.36A9.56 9.56 0 1 1 21.6 12c0 5.28-4.26 9.6-9.54 9.6zm5.52-7.14c-.3-.12-1.74-.9-2.04-.96-.3-.12-.54-.18-.78.18-.24.3-.9 1.02-1.14 1.2-.18.12-.48.06-.78-.12-.3-.18-1.26-.48-2.4-1.56-.9-.84-1.5-1.86-1.68-2.16-.18-.3 0-.48.12-.6.12-.12.3-.3.42-.48.12-.12.18-.24.3-.42.12-.18.06-.3 0-.48-.06-.12-.78-1.86-1.08-2.52-.3-.72-.6-.6-.78-.6h-.66c-.24 0-.6.18-.9.42-.3.3-1.14 1.14-1.14 2.76 0 1.62 1.14 3.18 1.32 3.42.18.24 2.22 3.42 5.28 4.74.72.3 1.26.48 1.68.6.72.24 1.38.18 1.92.12.6-.12 1.74-.72 1.98-1.38.24-.72.24-1.32.18-1.44-.06-.12-.24-.18-.48-.24z"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</header>
+<main>
+<section class="container hero" id="inicio">
+<div class="grid grid-2">
+<div>
+<h1>Lic. Fernando Madruga</h1>
+<p class="sublead">Psicólogo (UBA) • MN 72.094 • Atención presencial en Villa Urquiza • Atención online • Jóvenes y adultos</p>
+<p class="lead">Un espacio de trabajo reflexivo para pensar lo que te está pasando, poner en palabras lo que se vuelve difícil, donde se construye una orientación posible, considerando caso por caso y respetando la singularidad de cada persona.</p>
+<div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top:1rem">
+<a class="btn" href="#contacto">Solicitar un turno</a>
+<a class="btn outline" href="#como-trabajo">Cómo trabajo</a>
+</div>
+</div>
+<div class="media-card">
+<div class="media-wrap">
+<img alt="Ilustración" class="media" decoding="async" fetchpriority="high" loading="eager" src="DivanP_match.png"/>
+</div>
+</div>
+</div>
+</section><section class="container" id="servicios">
+<h2>¿Cuándo consultar?</h2>
+<div style="margin-top:.8rem">
+<p class="muted">Hay momentos en los que algo se desordena: ansiedad, angustia, estrés sostenido, duelos, cambios vitales o conflictos en los vínculos. A veces no se trata de un “hecho puntual”, sino de una sensación persistente de malestar o de la necesidad de entender por qué se repiten ciertas situaciones.</p>
+<p class="muted" style="margin-top:.8rem">Desde este lugar se brinda la oportunidad para pensar eso con continuidad, a tu ritmo, acompañado y en un contexto adecuado para trabajarlo.</p>
+</div>
+<div class="grid grid-3" style="margin-top:1.2rem">
+<div class="card soft">
+<div class="content">
+<div aria-hidden="true" class="icon"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+<strong>Jóvenes y adultos</strong>
+<p class="muted" style="margin:.5rem 0 0 0">Atención a jóvenes y adultos.</p>
+</div>
+</div>
+<div class="card soft">
+<div class="content">
+<div aria-hidden="true" class="icon"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M12 21s7-4.35 7-11a7 7 0 0 0-14 0c0 6.65 7 11 7 11z"></path><circle cx="12" cy="10" r="2"></circle></svg></div>
+<strong>Atención presencial</strong>
+<p class="muted" style="margin:.5rem 0 0 0">Consultorio en Villa Urquiza.</p>
+</div>
+</div>
+<div class="card soft">
+<div class="content">
+<div aria-hidden="true" class="icon"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><rect height="10" rx="2" width="13" x="3" y="7"></rect><path d="M16 10l5-3v10l-5-3z"></path></svg></div>
+<strong>Atención online</strong>
+<p class="muted" style="margin:.5rem 0 0 0">Sesiones por videollamada con el mismo encuadre y confidencialidad.</p>
+</div>
+</div>
+</div>
+</section><section class="container" id="sobre-mi">
+<div class="grid grid-2 about-grid">
+<div aria-hidden="true" class="about-media">
+<img alt="Libros y cuaderno" class="about-img" src="books_about.png"/>
+</div>
+<div>
+<h2>Sobre mí</h2>
+<p class="muted">Soy Licenciado en Psicología recibido de la Universidad de Buenos Aires, con formación de posgrado orientada a la atención clínica y al psicoanálisis. Sostengo una formación continua a través de cursos, seminarios y espacios de estudio. Matrícula Nacional del Ministerio de Salud de la Nación.</p>
+<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.6rem">
+<span class="pill" style="background:#ecfdf5; border:1px solid rgba(16,185,129,.30); color:#166534">Ética y confidencialidad</span>
+<span class="pill" style="background:#ecfdf5; border:1px solid rgba(16,185,129,.30); color:#166534">Jóvenes y Adultos</span>
+<span class="pill" style="background:#ecfdf5; border:1px solid rgba(16,185,129,.30); color:#166534">Orientación psicoanalítica</span>
+</div>
+</div>
+</div>
+</section>
+<section class="container" id="como-trabajo"><div class="grid" style="align-items:start">
+<div>
+<h2>Cómo trabajo</h2>
+<p class="muted">Trabajo con orientación psicoanalítica. La propuesta no es ofrecer soluciones rápidas ni dar respuestas generalizadas, sino sostener un espacio de escucha y elaboración que permita interrogar lo que le pasa a cada persona y cómo se posiciona frente a eso, considerando la singularidad de cada caso.</p>
+<ul class="muted" style="padding-left:1rem"><li>Primera entrevista: se ubica el motivo de consulta y se acuerda modalidad (presencial/online) y encuadre de trabajo.</li><li>Frecuencia: semanal (y, si es necesario, puede pensarse una frecuencia mayor).</li><li>Si en algún momento considero necesaria una derivación o una interconsulta con otro profesional, lo indico de manera clara.</li></ul>
+</div>
+</div>
+<div class="grid grid-3" style="margin-top:1.2rem">
+<div class="card soft">
+<div class="content">
+<div aria-hidden="true" class="icon"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v6l4 2"></path></svg></div>
+<strong>Duración de la sesión</strong>
+<p class="muted" style="margin:.5rem 0 0 0">50 min. aproximadamente.</p>
+</div>
+</div>
+<div class="card soft">
+<div class="content">
+<div aria-hidden="true" class="icon"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M21 12a9 9 0 0 1-15 6.7"></path><path d="M3 12a9 9 0 0 1 15-6.7"></path><path d="M3 16v-4h4"></path><path d="M21 8v4h-4"></path></svg></div>
+<strong>Frecuencia</strong>
+<p class="muted" style="margin:.5rem 0 0 0">Semanal.</p>
+</div>
+</div>
+<div class="card soft">
+<div class="content">
+<div aria-hidden="true" class="icon"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M9.5 4a3.5 3.5 0 0 0-3.5 3.5V9a3 3 0 0 0 0 6v1.5A3.5 3.5 0 0 0 9.5 20H10"></path><path d="M14.5 4A3.5 3.5 0 0 1 18 7.5V9a3 3 0 0 1 0 6v1.5A3.5 3.5 0 0 1 14.5 20H14"></path><path d="M10 4v16"></path><path d="M14 4v16"></path></svg></div>
+<strong>Orientación</strong>
+<p class="muted" style="margin:.5rem 0 0 0">Psicoanalítica.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="container" id="faq">
+<h2>Preguntas frecuentes</h2>
+<div class="faq" style="margin-top:.8rem">
+<details>
+<summary>¿Cómo es la primera entrevista?</summary>
+<p class="muted" style="margin:.6rem 0 0 0">Es un primer encuentro para ubicar el motivo de consulta y acordar modalidad (presencial/online) y encuadre de trabajo.</p>
+</details>
+<details>
+<summary>¿La atención es presencial u online?</summary>
+<p class="muted" style="margin:.6rem 0 0 0">Ambas. Presencial en Villa Urquiza y también online.</p>
+</details>
+<details>
+<summary>¿Con qué frecuencia son las sesiones?</summary>
+<p class="muted" style="margin:.6rem 0 0 0">Habitualmente semanal. En algunos casos puede considerarse una frecuencia mayor.</p>
+</details>
+<details>
+<summary>¿Con qué orientación trabajás?</summary>
+<p class="muted" style="margin:.6rem 0 0 0">Trabajo con orientación psicoanalítica.</p>
+</details>
+<details>
+<summary>¿Trabajás con obras sociales?</summary>
+<p class="muted" style="margin:.6rem 0 0 0">Trabajo de manera particular. Puedo brindar documentación para reintegros si tu cobertura lo permite.</p>
+</details>
+<details>
+<summary>¿Atendés parejas?</summary>
+<p class="muted" style="margin:.6rem 0 0 0">No. Si lo necesitás, puedo brindar contactos de derivación.</p>
+</details>
+<details>
+<summary>¿Esto reemplaza atención de urgencia?</summary>
+<p class="muted" style="margin:.6rem 0 0 0">No. Si estás en una situación de urgencia o riesgo, es importante que recurras a los servicios de emergencia de tu zona.</p>
+</details>
+</div>
+</section>
+<section class="container" id="contacto">
+<div class="contact-grid">
+<div>
+<h2>Contacto</h2>
+<p class="muted">Para coordinar una primera entrevista, podés escribirme por WhatsApp.</p>
+<div class="contact-links muted" style="display:grid; gap:.5rem; margin:.8rem 0 1rem 0">
+<a aria-label="Llamar al +54 11 57502776" href="tel:+541157502776">+54 11 57502776</a>
+<span>Capdevila 2833, C.A.B.A.</span>
+</div>
+<div style="display:flex; gap:.6rem; flex-wrap:wrap">
+<a class="btn" href="https://wa.me/541157502776" rel="noreferrer" target="_blank">WhatsApp</a>
+<a class="btn outline" href="#faq">Ver preguntas</a>
+</div>
+</div>
+<div class="card soft" style="overflow:hidden">
+<iframe height="360" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Capdevila%202833%20CABA&amp;output=embed" style="border:0" title="Mapa Capdevila 2833" width="100%"></iframe>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-shell">
+<div class="foot">
+<div>©2020 psicologo-villaurquiza Todos los Derechos Reservados</div>
+</div>
+</div>
+</div>
+</footer>
+<a class="wsp-float" href="https://wa.me/541157502776" rel="noreferrer" target="_blank">
+<span class="sr-only">WhatsApp</span>
+<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24">
+<path d="M20.52 3.48A11.9 11.9 0 0 0 12.06 0C5.46 0 .12 5.34.12 11.94c0 2.1.54 4.14 1.56 5.94L0 24l6.24-1.62A11.8 11.8 0 0 0 12.06 24c6.6 0 11.94-5.34 11.94-11.94 0-3.18-1.26-6.18-3.48-8.58zM12.06 21.6c-1.86 0-3.6-.48-5.16-1.44l-.36-.24-3.72.96.96-3.6-.24-.36A9.56 9.56 0 1 1 21.6 12c0 5.28-4.26 9.6-9.54 9.6zm5.52-7.14c-.3-.12-1.74-.9-2.04-.96-.3-.12-.54-.18-.78.18-.24.3-.9 1.02-1.14 1.2-.18.12-.48.06-.78-.12-.3-.18-1.26-.48-2.4-1.56-.9-.84-1.5-1.86-1.68-2.16-.18-.3 0-.48.12-.6.12-.12.3-.3.42-.48.12-.12.18-.24.3-.42.12-.18.06-.3 0-.48-.06-.12-.78-1.86-1.08-2.52-.3-.72-.6-.6-.78-.6h-.66c-.24 0-.6.18-.9.42-.3.3-1.14 1.14-1.14 2.76 0 1.62 1.14 3.18 1.32 3.42.18.24 2.22 3.42 5.28 4.74.72.3 1.26.48 1.68.6.72.24 1.38.18 1.92.12.6-.12 1.74-.72 1.98-1.38.24-.72.24-1.32.18-1.44-.06-.12-.24-.18-.48-.24z"></path>
+</svg>
+</a>
+</body>
+</html>
